@@ -147,6 +147,10 @@ footer{
     top: 0;
     z-index: 200;
   }
+  .pg{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 
   nav > ul {
     padding-bottom: 5px;
@@ -207,9 +211,9 @@ footer{
     border: dashed 2px black;
     
   }
-  img{
+  /* img{
     width: 300px;
-  }
+  } */
 
 }
 
