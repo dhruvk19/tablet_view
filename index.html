@@ -3,25 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" property="starter_html:customProperty">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
-
-    <title>Travel Destinations</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     
+    <title>Travel Destinations</title>
+    <script>
+        function hoverColorChange(element){
+            element.style.backgroundColor = "white";
+        }
+        function resetCol(element){
+            element.style.backgroundColor = "yellow";
+        }
+
+        
+
+    </script>
+
 </head>
 
 <body>
-    <div class="skip"><a href="">Skip to Main Content</a></div>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <nav>
         <ul>
             <li><a href="index.html" class = "curr">Travel Destinations!</a> </li>
             <li><a href="recipes.html">Recipes!</a> </li>
             <li><a href="pets.html">Pets!</a> </li>
         </ul>
+        <div id="locations">
+            <a class="place-link" href="#botswana" onmouseover = "hoverColorChange(this)" onmouseout="resetCol(this)">Okavango Delta, Botswana</a>
+            <a class="place-link" href="#switzerland" onmouseover = "hoverColorChange(this)" onmouseout="resetCol(this)">Zermatt, Switzerland</a>
+            <a class="place-link" href="#france" onmouseover = "hoverColorChange(this)" onmouseout="resetCol(this)">Paris, France</a>
+            <a class="place-link" href="#maldives" onmouseover = "hoverColorChange(this)" onmouseout="resetCol(this)">Ari Atoll, Maldives</a>
+            <a class="place-link" href="#uae" onmouseover = "hoverColorChange(this)" onmouseout="resetCol(this)">Dubai, United Arab Emirates</a>
+            <a class="place-link" href="#nanjing" onmouseover = "hoverColorChange(this)" onmouseout="resetCol(this)">Nanjing Fuzi-Qinhuai</a>
+        </div>
+        
     </nav>
     <main id = "main">
         <h1>Travel Destinations</h1>
-        <div class = "loc">
+        
+        <div class = "loc" id = "botswana">
             <h2>
                 Okavango Delta, Botswana 
             </h2>
@@ -49,7 +70,34 @@
             </div>
             <div>
                 <h3>Photo Gallery</h3>
-                <div class = "pg">
+                <figure>
+                    <img class="thumbnail" id="slideshow" src="images/okavango_delta_buffalo.jpeg" alt="buffalo">
+                    <figcaption>
+                        Seeing hundreds of buffalo together is a common migration sighting in the Okavango Delta.
+                    </figcaption>
+                </figure>
+            
+                <script>
+                    const images = [
+                        { src: "images/okavango_delta_buffalo.jpeg", alt: "buffalo", caption: "Seeing hundreds of buffalo together is a common migration sighting in the Okavango Delta." },
+                        { src: "images/okavango_delta_elephants.jpeg", alt: "elephants", caption: "A herd of elephants walk through swampy ground of the Delta." },
+                        { src: "images/okavango_delta_lions.jpeg", alt: "lions", caption: "A lioness with her three cubs covered in mud." },
+                        { src: "images/okavango_delta_mokoro.jpeg", alt: "mokoro", caption: "A guide taking tourists through the river with both sides covered by lush grass in a canoe-shaped boat called a mokoro." }
+                    ];
+                    let index = 0;
+            
+                    function nextImage() {
+                        index = (index + 1) % images.length;
+                        const img = document.getElementById("slideshow");
+                        img.src = images[index].src;
+                        img.alt = images[index].alt;
+                        const cap = document.getElementById("caption");
+                        cap.textContent = images[index].cap;
+                    }
+            
+                    setInterval(nextImage, 3000);
+                </script>
+                <!-- <div class = "pg">
                     <figure>
                         <img class = "thumbnail" src = "images/okavango_delta_buffalo.jpeg"  alt = "buffalo">
                         <figcaption>
@@ -68,12 +116,12 @@
                         <img class = "thumbnail" src = "images/okavango_delta_mokoro.jpeg"  alt = mokoro>
                         <figcaption>A guide taking tourists through the river with both sides covered by lush grass in a canoe-shaped boat called a mokoro.</figcaption>
                     </figure>
-                </div>
+                </div> -->
             </div>
             
             <!-- Dhruv Kapur -->
         </div>
-        <div class = "loc">
+        <div class = "loc" id = "switzerland">
             <h2>Zermatt, Switzerland</h2>
             <div class = "outer">
                 <div>
@@ -96,6 +144,7 @@
                 </div>
             </div>
             <h3>Photo Gallery</h3>
+            
             <div class = "pg">
                 <figure>
                     <img src = "images/River.jpg" alt = "" >
@@ -117,7 +166,7 @@
             
             <!-- Maya Rosenthal  -->
         </div>
-        <div class = "loc">
+        <div class = "loc" id = "france">
             <h2>Paris, France</h2>
             <div class = "outer">
                 <div>
@@ -161,7 +210,7 @@
             
             <!-- Phillip Ripsam-Walsh -->
         </div>
-        <div class = "loc">
+        <div class = "loc" id = "maldives">
             <h2>
                 Ari Atoll, Maldives
             </h2>
@@ -207,7 +256,7 @@
             
             <!-- Aditya Kaushal -->
         </div>
-        <div class = "loc">
+        <div class = "loc" id = "uae">
             <h2>Dubai, United Arab Emirates</h2>
             <div class = "outer">
                 <div>
@@ -251,7 +300,7 @@
             
             <!-- Nathan Lee -->
         </div>
-        <div class = "loc">
+        <div class = "loc" id = "nanjing">
             <h2>  Nanjing Fuzi-Qinhuai </h2>
             <div class = "outer">
                 <div>

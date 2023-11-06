@@ -3,22 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Pets</title>
+    <script>
+        function hoverColorChange(element){
+            element.style.backgroundColor = "white";
+        }
+        function resetCol(element){
+            element.style.backgroundColor = "yellow";
+        }
+    </script>
 </head>
 <body>
-    <div class="skip"><a href="">Skip to Main Content</a></div>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <nav>
         <ul>
             <li><a href="index.html">Travel Destinations!</a> </li>
             <li><a href="recipes.html">Recipes!</a> </li>
             <li><a href="pets.html" class = "curr">Pets!</a> </li>
         </ul>
+        <div id="locations">
+            <a class="place-link" href="#brutus" onmouseover = "hoverColorChange(this)" onmouseout="resetCol(this)">Brutus</a>
+            <a class="place-link" href="#basil" onmouseover = "hoverColorChange(this)" onmouseout="resetCol(this)">Basil</a>
+            <a class="place-link" href="#milktea" onmouseover = "hoverColorChange(this)" onmouseout="resetCol(this)">Milktea</a>
+            <a class="place-link" href="#bo" onmouseover = "hoverColorChange(this)" onmouseout="resetCol(this)">Bo</a>
+            <a class="place-link" href="#chonks" onmouseover = "hoverColorChange(this)" onmouseout="resetCol(this)">Chonks</a>
+        </div>
     </nav>
     <main id="main">
         <h1>Pets</h1>
-        <div class = "loc">
+        <div class = "loc" id = "brutus">
             <h2>
                 Brutus
             </h2>
@@ -49,7 +64,7 @@
             </ul>
             <!-- Dhruv Kapur -->
         </div>
-        <div class = "loc">
+        <div class = "loc" id = "basil">
             <h2>Basil</h2>
             <img width = "400" src = images/gurl_who_u_looking_at.png alt = "Fluffy white dog with paw on knee, begging for attention and giving you the side eye"> 
             <p>Basil, otherwise known as Slaysil, is a very energetic white, slightly crusty and trusty, dog (bichon) . She gets princess treatment in her household, but also out in public. As a consequence, she is very clingy and loves to lick, especially in the face.</p>
@@ -70,9 +85,8 @@
             </ul>
             <!--Bianca and Alina-->
         </div>
-       
         <!-- Pet #2 -->
-        <div class = "loc">
+        <div class = "loc" id = "milktea">
             <h2>Milktea</h2>
             <img width="400" src="images/Main.JPG" alt="Milktea taking nap">
             <p>Milktea is a Scottish fold with a personality of a princess. She loves her veggies and refuses to eat anything dropped on the ground. She makes it clear when she has a demand of any sort by complaining in a loud, distinguished manner. If what she says could be translated, it probably would be, “This is atrocious, the water container has been empty for the 3rd time this week. I want to see the manager.”.</p>
@@ -93,7 +107,7 @@
             <!-- Olivia Ren -->
         </div>
         <!-- Pet 3 -->
-        <div class = "loc">
+        <div class = "loc" id = "bo">
             <h2>Bo</h2>
             <img width="400" src="images/bo.jpg" alt="Black and white dog sitting on grass.">
             <p> Bo is a Portuguese Water Dog with black and white fur. His paws are white too, so they always get dirty when outside. He is 12 years old, but he still likes to run around outside a lot. </p>
@@ -115,7 +129,7 @@
             <!-- Joseph Schaubroeck -->
         </div>
         <!-- Pet 4 -->
-        <div class = "loc">
+        <div class = "loc" id = "chonks">
             <h2>Chunky Doll (Chonks)</h2>
             <img width="400" src="images/chonks.png" alt="Furry white and dark brown ragdoll.">
             <p>Chunky Doll or as he prefers to respond to, Chocks, is a 4-year-old ragdoll. His name was inspired by his breed and looks. As a kitten, he was even chunkier and blended right in with a fluffy white rug we had that he loved playing hide and seek in. He’s a very lazy but playful cat, only playful when he feels like it.</p>

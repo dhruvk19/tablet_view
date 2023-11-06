@@ -3,23 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>Recipes</title>
 </head>
 <body>
-    <div class="skip"><a href="">Skip to Main Content</a></div>
+    <div class="skip"><a href="#main">Skip to Main Content</a></div>
     <nav>
         <ul>
             <li><a href="index.html">Travel Destinations!</a></li>
             <li><a href="recipes.html" class = "curr">Recipes!</a></li>
             <li><a href="pets.html">Pets!</a></li>
         </ul>
+        <div id="locations">
+            <a class="place-link" href="#chicken" onmouseover = "hoverColorChange(this)" onmouseout="resetCol(this)">Homemade Chicken Tikka Masala</a>
+            <a class="place-link" href="#sandwich" onmouseover = "hoverColorChange(this)" onmouseout="resetCol(this)">Spicy Fried Chicken Sandwich</a>
+            <a class="place-link" href="#shrimp" onmouseover = "hoverColorChange(this)" onmouseout="resetCol(this)">Shrimp Scampi</a>
+        </div>
     </nav>
     <main id="main">
         <h1>Recipes</h1>
-        <div class = "loc">
-            <h2>Homemade Chicken Tikka Masala Recipe</h2>
+        <div class = "loc" id = "chicken">
+            <h2 >Homemade Chicken Tikka Masala Recipe</h2>
             <figure>
                 <img src = "images/tikkamasala_1.JPG" alt = "tikka masala" width = 400>
                 <figcaption>Chicken Tikka Masala</figcaption>
@@ -101,7 +106,7 @@
             <!-- Rachel Sondergeld -->
             
         </div>
-        <div class = "loc">
+        <div class = "loc" id = "sandwich">
             <h2>Spicy Fried Chicken Sandwich Recipe</h2>
             <p>Dish: Spicy Chicken Sandwich</p>
             <p>Origin: American</p>
@@ -159,7 +164,7 @@
             </div>
             <!-- Johann Tsegay -->
         </div>
-        <div class = "loc">
+        <div class = "loc" id = "shrimp">
             <h2>Shrimp Scampi</h2>
 
             <img src="images/shrimp_scampi.jpg" alt ="Shrimp scampi is a classic Italian-American delight">
